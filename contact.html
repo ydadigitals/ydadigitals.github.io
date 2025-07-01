@@ -16,7 +16,7 @@
         <li><a href="/careers.html">Careers</a></li>
         <li><a href="/crm.html">CRM Solution</a></li>
         <li><a href="/contact.html">Contact</a></li>
-        <li>
+        <!-- <li>
           <form id="searchForm">
             <input
               type="search"
@@ -26,7 +26,7 @@
             />
             <input type="submit" value="Go!" />
           </form>
-        </li>
+        </li> -->
         <ul id="searchResults"></ul>
       </ul>
     </nav>
@@ -36,14 +36,18 @@
     </aside>
 
     <main>
-      <article style="margin-left: 200px">
+      <article>
         <h1 class="page-header">Contact Us</h1>
         <p>
           If you have any questions or inquiries, please fill out the form below
           or reach out to us using the contact information provided.
         </p>
 
-        <form action="#" method="post">
+        <form
+          action="mailto:hello@ydadigitals.com"
+          method="post"
+          enctype="text/plain"
+        >
           <label for="name">Name:</label><br />
           <input type="text" id="name" name="name" required /><br /><br />
 
