@@ -1,26 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ydadigitals</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to ydadigitals!</h1>
-    <p>Company for outsourcing exceptional software talent and World Class software product in making</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ydadigitals - Home</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <!--See .navbar in styles.css-->
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/crm.html">CRM Solution</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li>
+          <form id="searchForm">
+            <input
+              type="search"
+              id="searchInput"
+              name="q"
+              placeholder="Search site"
+            />
+            <input type="submit" value="Go!" />
+          </form>
+        </li>
+        <ul id="searchResults"></ul>
+      </ul>
+    </nav>
+
+    <aside class="sidebar">
+      <!--See .sidebar in styles.css-->
+      <!-- <a href="/Async_Programming/">Async_Programming</a> -->
+    </aside>
+
+    <main>
+      <article style="margin-left: 200px">
+        <!--
+        <section>
+          <h2>Your Partner in Software Excellence</h2>
+          <p>
+            At ydadigitals, we specialize in software consulting and
+            outsourcing, providing exceptional talent to help you achieve your
+            business goals.
+          </p>
+          <p>
+            Explore our world-class CRM product designed to streamline your
+            operations and enhance customer relationships.
+          </p>
+        </section>
+    -->
+
+        <header>
+          <h1 class="page-header">Welcome to ydadigitals</h1>
+          <p style="font-size: 1.2em; color: #444; text-align: center">
+            Empowering Your Business with Innovative Software Solutions
+          </p>
+        </header>
+        <section>
+          <h2>What We Do</h2>
+          <ul style="font-size: 1.1em; margin-left: 32px">
+            <li>
+              <strong>Software Consulting:</strong> Expert guidance to help you
+              choose, design, and implement the right technology for your
+              business goals.
+            </li>
+            <li>
+              <strong>Software Development:</strong> Custom web, mobile, and
+              enterprise applications built with the latest technologies and
+              best practices.
+            </li>
+            <li>
+              <strong>Software Outsourcing:</strong> Flexible, scalable teams to
+              accelerate your projects and reduce costs.
+            </li>
+            <li>
+              <strong>Product Engineering:</strong> End-to-end product
+              development, from ideation to launch and beyond.
+            </li>
+            <li>
+              <strong>World-Class CRM Solution:</strong> Our flagship CRM
+              product streamlines your sales, support, and customer engagement.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why Choose ydadigitals?</h2>
+          <ul style="font-size: 1.1em; margin-left: 32px">
+            <li>Proven expertise across industries and technologies</li>
+            <li>Agile, collaborative approach for faster results</li>
+            <li>Focus on quality, security, and long-term value</li>
+            <li>Dedicated support and transparent communication</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Ready to Transform Your Business?</h2>
+          <p>
+            <a href="/contact.html" style="font-weight: bold; color: #0074d9"
+              >Contact us</a
+            >
+            today to discuss your project or explore our
+            <a href="/crm.html" style="font-weight: bold; color: #0074d9"
+              >CRM solution</a
+            >.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <p>&copy; 2025 ydadigitals. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

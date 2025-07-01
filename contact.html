@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - ydadigitals</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!--See .navbar in styles.css-->
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/crm.html">CRM Solution</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li>
+          <form id="searchForm">
+            <input
+              type="search"
+              id="searchInput"
+              name="q"
+              placeholder="Search site"
+            />
+            <input type="submit" value="Go!" />
+          </form>
+        </li>
+        <ul id="searchResults"></ul>
+      </ul>
+    </nav>
+
+    <aside class="sidebar">
+      <!--See .sidebar in styles.css-->
+    </aside>
+
+    <main>
+      <article style="margin-left: 200px">
+        <h1 class="page-header">Contact Us</h1>
+        <p>
+          If you have any questions or inquiries, please fill out the form below
+          or reach out to us using the contact information provided.
+        </p>
+
+        <form action="#" method="post">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="4" required></textarea
+          ><br /><br />
+
+          <input type="submit" value="Submit" />
+        </form>
+
+        <h2>Contact Information</h2>
+        <p>
+          Email:
+          <a href="mailto:hello@ydadigitals.com">hello@ydadigitals.com</a>
+        </p>
+        <!-- <p>Phone: +91 7276262231</p> -->
+        <p>Address: Kumar Park, Phursungi, Pune, Maharastra</p>
+      </article>
+    </main>
+    <footer>
+      <p>&copy; 2025 ydadigitals. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
