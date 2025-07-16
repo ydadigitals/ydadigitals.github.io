@@ -20,28 +20,36 @@ li {
 
 /* Responsive layout for sidebar and main content */
 @media (max-width: 900px) {
-  .sidebar {
-    display: none; /* Hide sidebar on small screens */
-  }
-  main article {
-    margin-left: 0 !important;
-    padding: 10px;
-  }
-}
-
-/* Responsive navbar */
-@media (max-width: 700px) {
-  .navbar ul {
-    display: flex;
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
+    padding: 0 12px;
   }
-  .navbar ul li {
-    display: block;
-    margin: 8px 0;
+  .navbar ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .navbar li {
+    width: 100%;
+  }
+  .hero-content {
+    padding: 24px 10px;
   }
 }
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 0 30px 0;
+  }
+  .logo {
+    height: 36px;
+  }
+  .cta-btn {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+/*Media query end*/
 
 /* Make images and containers flexible */
 img,
@@ -53,8 +61,44 @@ article {
   box-sizing: border-box;
 }
 
+.hero {
+  background-image: url("../images/page-header.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 80px 0 60px 0;
+  text-align: center;
+  position: relative;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 40px 30px;
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+/*Style .cta-btn for a modern button*/
+.cta-btn {
+  display: inline-block;
+  background: #0074d9;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+.cta-btn:hover {
+  background: #005fa3;
+  transform: translateY(-2px) scale(1.03);
+}
+
 .page-header {
-  background-image: url("../images/page-header.jpg"); /* Update with your image path */
+  /*background-image: url("../images/page-header.jpg"); */ /* Update with your image path */
   background-size: cover; /* Ensures the image covers the whole area */
   background-repeat: no-repeat; /* Prevents tiling */
   background-position: center; /* Centers the image */
@@ -114,24 +158,37 @@ h5 {
 
 /* Navigation styles start */
 .navbar {
-  /* margin-left: 180px;
-  margin-bottom: 20px; */
-  background-color: honeydew;
-  font-size: small;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.98);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 .navbar ul {
-  list-style-type: none;
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.navbar ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-.navbar ul li a {
+.navbar li a {
+  color: #222;
+  font-weight: 500;
   text-decoration: none;
-  color: #333;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
-.navbar a:hover {
-  color: blue;
+.navbar li a:hover {
+  background: #f0f4f8;
+}
+.logo {
+  height: 48px;
+  margin-right: 24px;
 }
 /*Navigation styles end */
 
@@ -142,7 +199,7 @@ main {
 
 /* Footer styles */
 footer {
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(131, 155, 131);
   padding: 20px;
   text-align: center;
   font-size: 14px;

@@ -17,69 +17,92 @@
       href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="images/yda-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/yda-logo-removebg-small.jpg"
+    />
   </head>
-  <body>
-    <nav class="navbar">
-      <!--See .navbar in styles.css-->
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/careers.html">Careers</a></li>
-        <li><a href="/crm.html">CRM Solution</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <!-- <li>
-          <form id="searchForm">
-            <input
-              type="search"
-              id="searchInput"
-              name="q"
-              placeholder="Search site"
-            />
-            <input type="submit" value="Go!" />
-          </form>
-        </li> -->
-        <ul id="searchResults"></ul>
-      </ul>
-    </nav>
 
-    <aside class="sidebar">
-      <!--See .sidebar in styles.css-->
-    </aside>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/crm.html">CRM Solution</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <ul id="searchResults"></ul>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h1>Empowering Your Business with Innovative Software Solutions</h1>
+        <p>We provide consulting, development, and world-class CRM products.</p>
+        <a href="/contact.html" class="cta-btn">Get in Touch</a>
+      </div>
+    </header>
 
     <main>
       <article>
-        <header>
-          <h1 class="page-header">Our World-Class CRM Product</h1>
-        </header>
-
         <section>
+          <section
+            class="crm-image-section"
+            style="text-align: center; margin-bottom: 32px"
+          >
+            <img
+              src="images/crm.jpg"
+              alt="ydadigitals CRM Product"
+              style="
+                max-width: 400px;
+                width: 60%;
+                border-radius: 16px;
+                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+              "
+            />
+            <p style="margin-top: 12px; font-style: italic; color: #555">
+              Our World-Class CRM Solution
+            </p>
+          </section>
+
           <h2>Features</h2>
-          <ul>
-            <li>Intuitive User Interface</li>
-            <li>Customizable Dashboards</li>
-            <li>Advanced Analytics and Reporting</li>
-            <li>Seamless Integration with Other Tools</li>
-            <li>Mobile Access for On-the-Go Management</li>
-          </ul>
+
+          <li>
+            <i class="fas fa-bolt"></i>
+            Intuitive User Interface
+          </li>
+          <li><i class="fas fa-bolt"></i>Customizable Dashboards</li>
+          <li><i class="fas fa-bolt"></i>Advanced Analytics and Reporting</li>
+          <li>
+            <i class="fas fa-bolt"></i>Seamless Integration with Other Tools
+          </li>
+          <li>
+            <i class="fas fa-bolt"></i>Mobile Access for On-the-Go Management
+          </li>
         </section>
         <section>
           <h2>Benefits</h2>
-          <p>
+          <li>
+            <i class="fas fa-rocket"></i>
             Our CRM product helps businesses streamline their processes, improve
             customer relationships, and drive sales growth. With powerful
             features and user-friendly design, it is the perfect solution for
             companies of all sizes.
-          </p>
+          </li>
         </section>
         <section>
           <h2>How It Can Help Your Business</h2>
-          <p>
+          <li>
+            <i class="fas fa-cogs"></i>
             By implementing our CRM solution, you can enhance your customer
             engagement, automate routine tasks, and gain valuable insights into
             your business performance. Let ydadigitals help you take your
             business to the next level.
-          </p>
+          </li>
         </section>
       </article>
     </main>
