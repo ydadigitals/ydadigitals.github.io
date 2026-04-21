@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Data Deletion | YDA Digitals</title>
+    <meta name="description" content="Submit a request to delete your personal data from YDA Digitals in compliance with GDPR, CCPA, and other privacy laws.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-bottom: 4px solid #ef4444;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-top: -2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            border-left: 5px solid #ef4444;
+            padding-left: 1rem;
+        }
+
+        .info-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin: 1.2rem 0 0.4rem;
+            color: #1e293b;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239,68,68,0.2);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            transform: scale(1.1);
+        }
+
+        button {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+        }
+
+        .success-msg, .error-msg {
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            display: none;
+        }
+
+        .success-msg {
+            background: #dcfce7;
+            color: #166534;
+            border-left: 4px solid #22c55e;
+        }
+
+        .error-msg {
+            background: #fee2e2;
+            color: #991b1b;
+            border-left: 4px solid #ef4444;
+        }
+
+        .footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .footer a {
+            color: #94a3b8;
+            margin: 0 0.75rem;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 640px) {
+            .form-card {
+                padding: 1.5rem;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Request Data Deletion</h1>
+    <p>You have the right to be forgotten. Submit a request to permanently delete your personal data from YDA Digitals.</p>
+</div>
+
+<div class="container">
+    <div class="form-card">
+        <h2>Data Erasure Request</h2>
+        <p>Under <strong>GDPR (Art. 17)</strong>, <strong>CCPA</strong>, and similar privacy laws, you can request that we delete personal information we hold about you. Once submitted, we will verify your identity and process your request within <strong>30 days</strong>.</p>
+
+        <div class="info-box">
+            <strong>⚠️ Important notes:</strong>
+            <ul style="margin: 0.5rem 0 0 1.2rem;">
+                <li>Deletion is permanent – we cannot recover your data.</li>
+                <li>We may retain limited information for legal, security, or fraud prevention reasons (e.g., transaction records for tax purposes).</li>
+                <li>If you have active services with us, deletion may interrupt them.</li>
+            </ul>
+        </div>
+
+        <form id="deletionForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <!-- Replace action with your actual form handler (e.g., Formspree, custom PHP, or email) -->
+            <input type="hidden" name="_subject" value="Data Deletion Request - ydadigitals.com">
+            <input type="hidden" name="_replyto" id="replyToEmail">
+
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email Address (associated with your account) *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="confirmEmail">Confirm Email Address *</label>
+            <input type="email" id="confirmEmail" name="confirm_email" required>
+
+            <label for="reason">Reason for deletion (optional)</label>
+            <select id="reason" name="reason">
+                <option value="">-- Select --</option>
+                <option value="no_longer_use">No longer using YDA Digitals services</option>
+                <option value="privacy_concerns">Privacy concerns</option>
+                <option value="inaccurate_data">Believe data is inaccurate</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="additional_info">Additional information (e.g., account username, service used)</label>
+            <textarea id="additional_info" name="additional_info" rows="3" placeholder="Help us locate your data faster..."></textarea>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="confirm" required>
+                <label for="confirm" style="margin:0; font-weight:normal;">I understand that this deletion is irreversible and may affect any active services I have with YDA Digitals.*</label>
+            </div>
+
+            <button type="submit">Submit Deletion Request</button>
+        </form>
+
+        <div id="successMessage" class="success-msg">
+            ✅ Your request has been submitted. We will email you within 30 days to confirm deletion or request verification.
+        </div>
+        <div id="errorMessage" class="error-msg">
+            ❌ Please fix errors: make sure emails match and all required fields are filled.
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 0.85rem; text-align: center; color: #64748b;">
+            For immediate help, contact <a href="mailto:hello@ydadigitals.com">hello@ydadigitals.com</a>. 
+            See our <a href="privacy-policy.html">Privacy Policy</a> for more information.
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-links">
+        <a href="https://ydadigitals.com/">Home</a> |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-of-service.html">Terms of Service</a> |
+        <a href="data-deletion.html">Data Deletion</a>
+    </div>
+    <p>&copy; 2026 YDA Digitals. All rights reserved.</p>
+</div>
+
+<script>
+    const form = document.getElementById('deletionForm');
+    const successDiv = document.getElementById('successMessage');
+    const errorDiv = document.getElementById('errorMessage');
+
+    // Dynamically set _replyto to the entered email
+    const emailInput = document.getElementById('email');
+    const replyToField = document.getElementById('replyToEmail');
+    emailInput.addEventListener('input', () => {
+        replyToField.value = emailInput.value;
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        errorDiv.style.display = 'none';
+        successDiv.style.display = 'none';
+
+        const email = emailInput.value.trim();
+        const confirmEmail = document.getElementById('confirmEmail').value.trim();
+        const fullname = document.getElementById('fullname').value.trim();
+        const confirmCheck = document.getElementById('confirm').checked;
+
+        if (!fullname || !email || !confirmEmail) {
+            errorDiv.innerHTML = '❌ Please fill in all required fields.';
+            errorDiv.style.display = 'block';
+            return;
+        }
+        if (email !== confirmEmail) {
+            errorDiv.innerHTML = '❌ Email addresses do not match.';
+            errorDiv.style.display = 'block';
+            return;
+        }
+        if (!confirmCheck) {
+            errorDiv.innerHTML = '❌ You must confirm that you understand the deletion is irreversible.';
+            errorDiv.style.display = 'block';
+            return;
+        }
+
+        // Submit using fetch (to avoid page reload)
+        const formData = new FormData(form);
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                form.reset();
+                successDiv.style.display = 'block';
+                // Optionally reset replyTo hidden field
+                replyToField.value = '';
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (err) {
+            errorDiv.innerHTML = '❌ Submission error. Please email hello@ydadigitals.com directly.';
+            errorDiv.style.display = 'block';
+        }
+    });
+</script>
+</body>
+</html>
