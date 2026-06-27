@@ -1,32 +1,40 @@
-// This file contains JavaScript functionality for the ydadigitals website.
-// It includes form validation, interactive elements, and dynamic content.
+/**
+ * Contact form validation with inline errors (Phase 5).
+ */
+document.addEventListener("DOMContentLoaded", function () {
+  var contactForm = document.getElementById("contact-form");
+  if (!contactForm) {
+    return;
+  }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Example of form validation for the contact form
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+  var errorBox = document.getElementById("contact-form-error");
+  var nameInput = document.getElementById("name");
+  var emailInput = document.getElementById("email");
+  var messageInput = document.getElementById("message");
 
-            if (!name || !email || !message) {
-                event.preventDefault();
-                alert('Please fill in all fields.');
-            } else {
-                alert('Thank you for your message!');
-            }
-        });
+  contactForm.addEventListener("submit", function (event) {
+    var name = nameInput.value.trim();
+    var email = emailInput.value.trim();
+    var message = messageInput.value.trim();
+
+    if (!name || !email || !message) {
+      event.preventDefault();
+      if (errorBox) {
+        errorBox.textContent = "Please fill in all fields before submitting.";
+        errorBox.hidden = false;
+      }
+      if (!name) {
+        nameInput.focus();
+      } else if (!email) {
+        emailInput.focus();
+      } else {
+        messageInput.focus();
+      }
+      return;
     }
 
-    // Example of interactive elements
-    const toggleButton = document.getElementById('toggle-info');
-    if (toggleButton) {
-        toggleButton.addEventListener('click', function() {
-            const infoSection = document.getElementById('info-section');
-            if (infoSection) {
-                infoSection.classList.toggle('hidden');
-            }
-        });
+    if (errorBox) {
+      errorBox.hidden = true;
     }
+  });
 });

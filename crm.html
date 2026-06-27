@@ -4,17 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ydadigitals CRM Product</title>
+    <meta
+      name="description"
+      content="ydadigitals CRM — intuitive dashboards, analytics, integrations, and mobile access for sales and customer engagement."
+    />
+    <link rel="canonical" href="https://ydadigitals.com/crm.html" />
+    <meta property="og:title" content="ydadigitals CRM Product" />
+    <meta
+      property="og:description"
+      content="ydadigitals CRM — intuitive dashboards, analytics, integrations, and mobile access for sales and customer engagement."
+    />
+    <meta property="og:url" content="https://ydadigitals.com/crm.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ydadigitals" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/chrome.css" />
+    <link rel="stylesheet" href="css/components/pages.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -28,91 +37,126 @@
     />
   </head>
 
-  <body>
-    <header class="hero">
-      <nav class="navbar">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/careers.html">Careers</a></li>
-          <li><a href="/crm.html">CRM Solution</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <ul id="searchResults"></ul>
-        </ul>
+  <body class="page-inner">
+    <header class="site-header site-header--inner">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="/" class="site-wordmark">ydadigitals</a>
+        <div class="navbar__inner">
+          <ul class="navbar__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/crm.html">CRM Solution</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <button
+            type="button"
+            class="navbar__menu-toggle"
+            aria-expanded="false"
+            aria-controls="nav-overlay"
+            aria-label="Open menu"
+          >
+            Menu
+          </button>
+        </div>
+        <div id="searchResults" aria-live="polite"></div>
       </nav>
-      <div class="hero-content">
-        <h1>Empowering Your Business with Innovative Software Solutions</h1>
-        <p>We provide consulting, development, and world-class CRM products.</p>
-        <a href="/contact.html" class="cta-btn">Get in Touch</a>
+      <div id="nav-overlay" class="nav-overlay" aria-hidden="true" hidden>
+        <nav class="nav-overlay__panel" aria-label="Mobile menu">
+          <ul class="nav-overlay__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/crm.html">CRM Solution</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main>
-      <article>
-        <section>
-          <section
-            class="crm-image-section"
-            style="text-align: center; margin-bottom: 32px"
-          >
-            <img
-              src="images/crm.jpg"
-              alt="ydadigitals CRM Product"
-              style="
-                max-width: 400px;
-                width: 60%;
-                border-radius: 16px;
-                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-              "
-            />
-            <p style="margin-top: 12px; font-style: italic; color: #555">
-              Our World-Class CRM Solution
-            </p>
-          </section>
+    <main class="page-main">
+      <header class="page-portal">
+        <h1 class="page-portal__title">
+          <span>World-class</span>
+          <span>CRM</span>
+        </h1>
+        <p class="page-portal__lead">
+          Streamline sales, support, and customer engagement with a product built
+          for modern teams.
+        </p>
+      </header>
 
-          <h2>Features</h2>
-
-          <li>
-            <i class="fas fa-bolt"></i>
-            Intuitive User Interface
-          </li>
-          <li><i class="fas fa-bolt"></i>Customizable Dashboards</li>
-          <li><i class="fas fa-bolt"></i>Advanced Analytics and Reporting</li>
-          <li>
-            <i class="fas fa-bolt"></i>Seamless Integration with Other Tools
-          </li>
-          <li>
-            <i class="fas fa-bolt"></i>Mobile Access for On-the-Go Management
-          </li>
-        </section>
-        <section>
-          <h2>Benefits</h2>
-          <li>
-            <i class="fas fa-rocket"></i>
+      <section class="case-study__hero">
+        <figure class="case-study__media">
+          <img
+            src="images/crm.jpg"
+            alt="ydadigitals CRM Product dashboard"
+            loading="lazy"
+          />
+          <figcaption>Our World-Class CRM Solution</figcaption>
+        </figure>
+        <div class="case-study__intro">
+          <h2>Built for growth</h2>
+          <p>
             Our CRM product helps businesses streamline their processes, improve
             customer relationships, and drive sales growth. With powerful
             features and user-friendly design, it is the perfect solution for
             companies of all sizes.
-          </li>
-        </section>
-        <section>
-          <h2>How It Can Help Your Business</h2>
-          <li>
+          </p>
+          <a href="/contact.html" class="cta-btn">Request a demo</a>
+        </div>
+      </section>
+
+      <section class="feature-columns" aria-labelledby="crm-features">
+        <div class="feature-column">
+          <h3 id="crm-features">Features</h3>
+          <ul>
+            <li><i class="fas fa-bolt"></i> Intuitive User Interface</li>
+            <li><i class="fas fa-bolt"></i> Customizable Dashboards</li>
+            <li><i class="fas fa-bolt"></i> Advanced Analytics and Reporting</li>
+            <li><i class="fas fa-bolt"></i> Seamless Integration with Other Tools</li>
+            <li><i class="fas fa-bolt"></i> Mobile Access for On-the-Go Management</li>
+          </ul>
+        </div>
+        <div class="feature-column">
+          <h3>Benefits</h3>
+          <p>
+            <i class="fas fa-rocket"></i>
+            Powerful features and user-friendly design make our CRM the right fit
+            for teams that need clarity without complexity.
+          </p>
+        </div>
+        <div class="feature-column">
+          <h3>Business impact</h3>
+          <p>
             <i class="fas fa-cogs"></i>
-            By implementing our CRM solution, you can enhance your customer
-            engagement, automate routine tasks, and gain valuable insights into
-            your business performance. Let ydadigitals help you take your
-            business to the next level.
-          </li>
-        </section>
-      </article>
+            Enhance customer engagement, automate routine tasks, and gain
+            valuable insights into your business performance.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-study__cta">
+        <p>
+          Let ydadigitals help you take your business to the next level with a
+          CRM tailored to how you sell and support customers.
+        </p>
+        <a href="/contact.html" class="cta-btn">Get in touch</a>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2026 ydadigitals. All rights reserved.</p>
-      <div>
-        <a href="privacy-policy.html">Privacy Policy</a> |
-        <a href="terms-of-service.html">Terms of Service</a> |
+
+    <footer class="site-footer">
+      <p class="site-footer__copy">&copy; 2026 ydadigitals. All rights reserved.</p>
+      <nav class="site-footer__legal" aria-label="Legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
         <a href="/data-deletion.html">User Data Deletion</a>
-      </div>
+      </nav>
     </footer>
+    <script src="js/motion.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/page-enter.js"></script>
   </body>
 </html>

@@ -4,17 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - ydadigitals</title>
+    <meta
+      name="description"
+      content="Contact ydadigitals for software consulting, development, or CRM inquiries. Reach us in Pune, India or by email."
+    />
+    <link rel="canonical" href="https://ydadigitals.com/contact.html" />
+    <meta property="og:title" content="Contact Us - ydadigitals" />
+    <meta
+      property="og:description"
+      content="Contact ydadigitals for software consulting, development, or CRM inquiries. Reach us in Pune, India or by email."
+    />
+    <meta property="og:url" content="https://ydadigitals.com/contact.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ydadigitals" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/chrome.css" />
+    <link rel="stylesheet" href="css/components/pages.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -28,66 +37,103 @@
     />
   </head>
 
-  <body>
-    <header class="hero">
-      <nav class="navbar">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/careers.html">Careers</a></li>
-          <li><a href="/crm.html">CRM Solution</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <ul id="searchResults"></ul>
-        </ul>
+  <body class="page-inner">
+    <header class="site-header site-header--inner">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="/" class="site-wordmark">ydadigitals</a>
+        <div class="navbar__inner">
+          <ul class="navbar__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/crm.html">CRM Solution</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <button
+            type="button"
+            class="navbar__menu-toggle"
+            aria-expanded="false"
+            aria-controls="nav-overlay"
+            aria-label="Open menu"
+          >
+            Menu
+          </button>
+        </div>
+        <div id="searchResults" aria-live="polite"></div>
       </nav>
-      <div class="hero-content">
-        <h1>Empowering Your Business with Innovative Software Solutions</h1>
-        <p>We provide consulting, development, and world-class CRM products.</p>
-        <a href="/contact.html" class="cta-btn">Get in Touch</a>
+      <div id="nav-overlay" class="nav-overlay" aria-hidden="true" hidden>
+        <nav class="nav-overlay__panel" aria-label="Mobile menu">
+          <ul class="nav-overlay__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/crm.html">CRM Solution</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main>
-      <article>
-        <li>
-          <i class="fas fa-envelope"></i>
-          If you have any questions or inquiries, please fill out the form below
-          or reach out to us using the contact information provided.
-        </li>
-
-        <form
-          action="mailto:hello@ydadigitals.com"
-          method="post"
-          enctype="text/plain"
-        >
-          <label for="name">Name:</label><br />
-          <input type="text" id="name" name="name" required /><br /><br />
-
-          <label for="email">Email:</label><br />
-          <input type="email" id="email" name="email" required /><br /><br />
-
-          <label for="message">Message:</label><br />
-          <textarea id="message" name="message" rows="4" required></textarea
-          ><br /><br />
-
-          <input type="submit" value="Submit" />
-        </form>
-
-        <h2>Contact Information</h2>
-        <p>
-          Email:
-          <a href="mailto:hello@ydadigitals.com">hello@ydadigitals.com</a>
+    <main class="page-main">
+      <header class="page-portal">
+        <h1 class="page-portal__title">
+          <span>Let's</span>
+          <span>talk</span>
+        </h1>
+        <p class="page-portal__lead">
+          Questions about a project or our CRM? Fill out the form or reach us
+          using the details below.
         </p>
-        <p>Address: I1 Kumar Park, Pune, MH, India</p>
-      </article>
-    </main>
-    <footer>
-      <p>&copy; 2026 ydadigitals. All rights reserved.</p>
-      <div>
-        <a href="privacy-policy.html">Privacy Policy</a> |
-        <a href="terms-of-service.html">Terms of Service</a> |
-        <a href="/data-deletion.html">User Data Deletion</a>
+      </header>
+
+      <div class="contact-layout">
+        <section>
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="mailto:hello@ydadigitals.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <p id="contact-form-error" class="form-error" hidden role="alert"></p>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="contact-form__submit">Send message</button>
+          </form>
+        </section>
+
+        <aside class="contact-info">
+          <h2>Contact Information</h2>
+          <p>
+            Email:
+            <a href="mailto:hello@ydadigitals.com">hello@ydadigitals.com</a>
+          </p>
+          <p>Address: I1 Kumar Park, Pune, MH, India</p>
+        </aside>
       </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="site-footer__copy">&copy; 2026 ydadigitals. All rights reserved.</p>
+      <nav class="site-footer__legal" aria-label="Legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
+        <a href="/data-deletion.html">User Data Deletion</a>
+      </nav>
     </footer>
+    <script src="js/motion.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/page-enter.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

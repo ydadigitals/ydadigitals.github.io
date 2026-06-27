@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ydadigitals - Home</title>
+    <meta
+      name="description"
+      content="Software consulting, development, and world-class CRM products from ydadigitals."
+    />
+    <link rel="canonical" href="https://ydadigitals.com/" />
+    <meta property="og:title" content="ydadigitals - Home" />
+    <meta
+      property="og:description"
+      content="Software consulting, development, and world-class CRM products from ydadigitals."
+    />
+    <meta property="og:url" content="https://ydadigitals.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ydadigitals" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/external.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/chrome.css" />
+    <link rel="stylesheet" href="css/components/home-hero.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -27,97 +35,272 @@
       type="image/png"
       href="images/yda-logo-removebg-small.jpg"
     />
-
-    <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    </style>
   </head>
 
-  <body>
-    <header class="hero">
-      <nav class="navbar">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/careers.html">Careers</a></li>
-          <li><a href="/crm.html">CRM Solution</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <ul id="searchResults"></ul>
-        </ul>
+  <body class="page-home">
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="/" class="site-wordmark">ydadigitals</a>
+        <div class="navbar__inner">
+          <ul class="navbar__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/crm.html">CRM Solution</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <button
+            type="button"
+            class="navbar__menu-toggle"
+            aria-expanded="false"
+            aria-controls="nav-overlay"
+            aria-label="Open menu"
+          >
+            Menu
+          </button>
+        </div>
+        <div id="searchResults" aria-live="polite"></div>
       </nav>
-      <div class="hero-image">
-        <h1>Empowering Your Business with Innovative Software Solutions</h1>
-        <p>We provide consulting, development, and world-class CRM products.</p>
-        <a href="/contact.html" class="cta-btn">Get in Touch</a>
+      <div id="nav-overlay" class="nav-overlay" aria-hidden="true" hidden>
+        <nav class="nav-overlay__panel" aria-label="Mobile menu">
+          <ul class="nav-overlay__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/crm.html">CRM Solution</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main>
-      <article>
-        <section>
-          <h2>What We Do</h2>
-          <li>
-            <i class="fas fa-lightbulb"></i>
-            <strong>Software Consulting:</strong> Expert guidance to help you
-            choose, design, and implement the right technology for your business
-            goals.
-          </li>
-          <li>
-            <i class="fas fa-lightbulb"></i>
-            <strong>Software Development:</strong> Custom web, mobile, and
-            enterprise applications built with the latest technologies and best
-            practices.
-          </li>
-          <li>
-            <i class="fas fa-lightbulb"></i>
-            <strong>Software Outsourcing:</strong> Flexible, scalable teams to
-            accelerate your projects and reduce costs.
-          </li>
-          <li>
-            <i class="fas fa-lightbulb"></i>
-            <strong>Product Engineering:</strong> End-to-end product
-            development, from ideation to launch and beyond.
-          </li>
-          <li>
-            <i class="fas fa-lightbulb"></i>
-            <strong>World-Class CRM Solution:</strong> Our flagship CRM product
-            streamlines your sales, support, and customer engagement.
-          </li>
-        </section>
-        <section>
-          <h2>Why Choose ydadigitals?</h2>
-          <li>Proven expertise across industries and technologies</li>
-          <li>Agile, collaborative approach for faster results</li>
-          <li>Focus on quality, security, and long-term value</li>
-          <li>Dedicated support and transparent communication</li>
-        </section>
-        <section>
-          <h2>Ready to Transform Your Business?</h2>
-          <li>
-            <a href="/contact.html" style="font-weight: bold; color: #0074d9"
-              >Contact us</a
-            >
-            today to discuss your project or explore our
-            <a href="/crm.html" style="font-weight: bold; color: #0074d9"
-              >CRM solution</a
-            >.
-          </li>
-        </section>
-      </article>
-    </main>
-    <footer>
-      <p>&copy; 2026 ydadigitals. All rights reserved.
-      <div class="legal-links">
-          <a href="/privacy-policy.html">Privacy Policy</a> |
-          <a href="/terms-of-service.html">Terms of Service</a> |
-          <a href="/data-deletion.html">User Data Deletion</a>
+    <section class="hero-stage" aria-label="Introduction">
+      <div class="hero-stage__bg" aria-hidden="true">
+        <div class="marquee-row">
+          <div class="marquee-row__track">
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+          </div>
+        </div>
+        <div class="marquee-row">
+          <div class="marquee-row__track">
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+          </div>
+        </div>
+        <div class="marquee-row">
+          <div class="marquee-row__track">
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+            <span class="marquee-row__item">ydadigitals</span>
+          </div>
+        </div>
       </div>
-      </p>
+
+      <div class="hero-stage__layout">
+        <div class="hero-stage__intro">
+          <h1 class="hero-display">
+            <span class="hero-display__line">We build</span>
+            <span class="hero-display__line">software</span>
+            <span class="hero-display__line">that scales</span>
+          </h1>
+          <p class="hero-subline">
+            Consulting, development, and world-class CRM products for businesses
+            ready to grow.
+          </p>
+          <a href="/contact.html" class="hero-cta">Get in touch</a>
+
+          <aside
+            id="service-panel"
+            class="service-panel"
+            aria-live="polite"
+            aria-hidden="true"
+          >
+            <h2 class="service-panel__title"></h2>
+            <p class="service-panel__copy"></p>
+            <a class="service-panel__link" href="#">Learn more</a>
+          </aside>
+        </div>
+
+        <nav class="service-grid" aria-label="Services and pages">
+          <a
+            class="service-grid__cell"
+            href="/contact.html"
+            data-title="Software Consulting"
+            data-copy="Expert guidance to help you choose, design, and implement the right technology for your business goals."
+            data-link-label="Start a conversation"
+          >
+            <span class="service-grid__num">01</span>
+            <span class="service-grid__label">Consulting</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/contact.html"
+            data-title="Software Development"
+            data-copy="Custom web, mobile, and enterprise applications built with modern technologies and best practices."
+            data-link-label="Discuss your project"
+          >
+            <span class="service-grid__num">02</span>
+            <span class="service-grid__label">Development</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/contact.html"
+            data-title="Software Outsourcing"
+            data-copy="Flexible, scalable teams to accelerate your projects and reduce costs without sacrificing quality."
+            data-link-label="Explore outsourcing"
+          >
+            <span class="service-grid__num">03</span>
+            <span class="service-grid__label">Outsourcing</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/contact.html"
+            data-title="Product Engineering"
+            data-copy="End-to-end product development, from ideation to launch and beyond."
+            data-link-label="Build with us"
+          >
+            <span class="service-grid__num">04</span>
+            <span class="service-grid__label">Product Engineering</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/crm.html"
+            data-title="World-Class CRM"
+            data-copy="Our flagship CRM streamlines sales, support, and customer engagement for teams of every size."
+            data-link-label="Explore CRM"
+          >
+            <span class="service-grid__num">05</span>
+            <span class="service-grid__label">CRM Solution</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/about.html"
+            data-title="About ydadigitals"
+            data-copy="Mission-driven software consulting and outsourcing that empowers businesses to achieve their goals."
+            data-link-label="About us"
+          >
+            <span class="service-grid__num">06</span>
+            <span class="service-grid__label">About</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/careers.html"
+            data-title="Careers"
+            data-copy="Join a team that values innovation, collaboration, and excellence across engineering roles."
+            data-link-label="View openings"
+          >
+            <span class="service-grid__num">07</span>
+            <span class="service-grid__label">Careers</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/contact.html"
+            data-title="Contact"
+            data-copy="Questions about a project or our CRM? Reach out — we respond with clarity and speed."
+            data-link-label="Contact us"
+          >
+            <span class="service-grid__num">08</span>
+            <span class="service-grid__label">Contact</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/about.html"
+            data-title="Agile Delivery"
+            data-copy="Collaborative, iterative approach for faster results and transparent communication."
+            data-link-label="Our approach"
+          >
+            <span class="service-grid__num">09</span>
+            <span class="service-grid__label">Agile</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/about.html"
+            data-title="Quality &amp; Security"
+            data-copy="Focus on quality, security, and long-term value in every engagement we take on."
+            data-link-label="Why choose us"
+          >
+            <span class="service-grid__num">10</span>
+            <span class="service-grid__label">Quality</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/crm.html"
+            data-title="CRM Features"
+            data-copy="Dashboards, analytics, integrations, and mobile access — built for modern sales teams."
+            data-link-label="See features"
+          >
+            <span class="service-grid__num">11</span>
+            <span class="service-grid__label">CRM Features</span>
+          </a>
+          <a
+            class="service-grid__cell"
+            href="/contact.html"
+            data-title="Ready to transform?"
+            data-copy="Discuss your project or explore our CRM solution with the ydadigitals team today."
+            data-link-label="Get in touch"
+          >
+            <span class="service-grid__num">12</span>
+            <span class="service-grid__label">Get Started</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p class="site-footer__copy">&copy; 2026 ydadigitals. All rights reserved.</p>
+      <nav class="site-footer__legal" aria-label="Legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
+        <a href="/data-deletion.html">User Data Deletion</a>
+      </nav>
     </footer>
+    <script src="js/motion.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="js/hero.js"></script>
   </body>
 </html>

@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request Data Deletion | YDA Digitals</title>
     <meta name="description" content="Submit a request to delete your personal data from YDA Digitals in compliance with GDPR, CCPA, and other privacy laws.">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/chrome.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/yda-logo-removebg-small.jpg" />
     <style>
         * {
             margin: 0;
@@ -172,7 +181,34 @@
         }
     </style>
 </head>
-<body>
+<body class="page-legal">
+
+<header class="site-header site-header--legal">
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="/" class="site-wordmark">ydadigitals</a>
+    <div class="navbar__inner">
+      <ul class="navbar__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/crm.html">CRM Solution</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <button type="button" class="navbar__menu-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open menu">Menu</button>
+    </div>
+  </nav>
+  <div id="nav-overlay" class="nav-overlay" aria-hidden="true" hidden>
+    <nav class="nav-overlay__panel" aria-label="Mobile menu">
+      <ul class="nav-overlay__links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+        <li><a href="/crm.html">CRM Solution</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <div class="header">
     <h1>Request Data Deletion</h1>
@@ -241,16 +277,21 @@
     </div>
 </div>
 
-<div class="footer">
-    <div class="footer-links">
-        <a href="https://ydadigitals.com/">Home</a> |
-        <a href="privacy-policy.html">Privacy Policy</a> |
-        <a href="terms-of-service.html">Terms of Service</a> |
-        <a href="data-deletion.html">Data Deletion</a>
-    </div>
-    <p>&copy; 2026 YDA Digitals. All rights reserved.</p>
-</div>
-
+<footer class="site-footer">
+  <p class="site-footer__copy">&copy; 2026 YDA Digitals. All rights reserved.</p>
+  <nav class="site-footer__legal" aria-label="Legal">
+    <a href="/">Home</a>
+    <span class="site-footer__sep" aria-hidden="true">|</span>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <span class="site-footer__sep" aria-hidden="true">|</span>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <span class="site-footer__sep" aria-hidden="true">|</span>
+    <a href="data-deletion.html">User Data Deletion</a>
+  </nav>
+</footer>
+<script src="js/motion.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/page-enter.js"></script>
 <script>
     const form = document.getElementById('deletionForm');
     const successDiv = document.getElementById('successMessage');

@@ -1,0 +1,37 @@
+<!--
+  partials/nav.html — shared navigation (copy into <header> on each main page)
+  Paths are root-absolute (/...) — works from /cp/* subpages too.
+-->
+<nav class="navbar" aria-label="Main navigation">
+  <a href="/" class="site-wordmark">ydadigitals</a>
+  <div class="navbar__inner">
+    <ul class="navbar__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About Us</a></li>
+      <li><a href="/careers.html">Careers</a></li>
+      <li><a href="/crm.html">CRM Solution</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <button
+      type="button"
+      class="navbar__menu-toggle"
+      aria-expanded="false"
+      aria-controls="nav-overlay"
+      aria-label="Open menu"
+    >
+      Menu
+    </button>
+  </div>
+  <div id="searchResults" aria-live="polite"></div>
+</nav>
+<div id="nav-overlay" class="nav-overlay" aria-hidden="true" hidden>
+  <nav class="nav-overlay__panel" aria-label="Mobile menu">
+    <ul class="nav-overlay__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About Us</a></li>
+      <li><a href="/careers.html">Careers</a></li>
+      <li><a href="/crm.html">CRM Solution</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</div>

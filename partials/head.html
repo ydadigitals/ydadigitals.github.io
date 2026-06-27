@@ -1,0 +1,40 @@
+<!--
+  partials/head.html — shared <head> snippet (copy manually; no build step yet)
+
+  Replace placeholders per page:
+    {{PAGE_TITLE}}       — e.g. "About Us - ydadigitals"
+    {{PAGE_DESCRIPTION}} — unique meta description
+    {{CANONICAL_URL}}    — e.g. https://ydadigitals.com/about.html
+    {{ASSET_PREFIX}}     — "" for root pages, "/" for /cp/* pages
+    {{EXTRA_STYLESHEETS}}— optional lines (e.g. external.css on home only)
+
+  See partials/README.md for the full page list and sync checklist.
+-->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{PAGE_TITLE}}</title>
+<meta name="description" content="{{PAGE_DESCRIPTION}}" />
+<link rel="canonical" href="{{CANONICAL_URL}}" />
+<meta property="og:title" content="{{PAGE_TITLE}}" />
+<meta property="og:description" content="{{PAGE_DESCRIPTION}}" />
+<meta property="og:url" content="{{CANONICAL_URL}}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ydadigitals" />
+<link rel="stylesheet" href="{{ASSET_PREFIX}}css/styles.css" />
+<link rel="stylesheet" href="{{ASSET_PREFIX}}css/tokens.css" />
+{{EXTRA_STYLESHEETS}}
+<link rel="stylesheet" href="{{ASSET_PREFIX}}css/base.css" />
+<link rel="stylesheet" href="{{ASSET_PREFIX}}css/components/chrome.css" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  href="{{ASSET_PREFIX}}images/yda-logo-removebg-small.jpg"
+/>
