@@ -1,0 +1,446 @@
+/**
+ * Inner page layouts — portal headers, cards, case study, contact, careers (Phase 5)
+ */
+
+.page-inner {
+  background: var(--color-future-bg-primary);
+  color: var(--color-future-text-primary);
+}
+
+.page-inner .site-wordmark,
+.page-inner .navbar__links a,
+.page-inner .navbar__menu-toggle {
+  color: var(--color-future-text-primary);
+}
+
+.page-inner .navbar__links a:hover,
+.page-inner .navbar__menu-toggle:hover {
+  background: var(--color-future-border-subtle);
+}
+
+.page-inner .navbar__menu-toggle {
+  border-color: var(--color-future-border-subtle);
+}
+
+.section-title {
+  margin: 0 0 var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-future-text-primary);
+}
+
+.site-header--inner {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header--legal {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-nav-bg);
+}
+
+.page-inner .navbar {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: none;
+  border-bottom: 1px solid var(--color-future-border-subtle);
+}
+
+.page-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-10) var(--space-8) var(--space-16);
+}
+
+/* Page enter (Phase 4) — content always visible; JS adds subtle motion */
+.page-enter-ready .page-main {
+  animation: page-enter-fade 0.55s ease both;
+}
+
+html.reduced-motion .page-enter-ready .page-main {
+  animation: none;
+}
+
+@keyframes page-enter-fade {
+  from {
+    opacity: 0.88;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Portal page header */
+.page-portal {
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-future-border-subtle);
+}
+
+.page-portal__title {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.04em;
+  color: var(--color-future-text-primary);
+}
+
+.page-portal__title span {
+  display: block;
+}
+
+.page-portal__lead {
+  margin: 0;
+  max-width: 36rem;
+  font-size: var(--text-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-future-text-muted);
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.card-grid--duo {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portal-card {
+  padding: var(--space-8);
+  border: 1px solid var(--color-future-border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-future-bg-elevated);
+}
+
+.portal-card h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-future-text-primary);
+}
+
+.portal-card p,
+.portal-card ul,
+.page-portal__lead,
+.contact-info p,
+.case-study__intro p,
+.feature-column p,
+.role-item__panel p {
+  margin-left: 0;
+}
+
+.portal-card p,
+.portal-card ul {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-future-text-muted);
+}
+
+.portal-card ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.portal-card li {
+  margin-bottom: var(--space-2);
+  padding-left: 0;
+}
+
+.portal-card li i {
+  margin-right: var(--space-2);
+  color: var(--color-accent);
+}
+
+.portal-card--spaced {
+  margin-top: var(--space-10);
+}
+
+.portal-card--spaced-sm {
+  margin-top: var(--space-6);
+}
+
+/* Case study (CRM) */
+.case-study__hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  align-items: center;
+  margin-bottom: var(--space-12);
+}
+
+.case-study__media img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  display: block;
+  margin: 0 auto;
+}
+
+.case-study__media figcaption {
+  margin-top: var(--space-4);
+  text-align: center;
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-future-text-muted);
+}
+
+.case-study__intro h2 {
+  margin: 0 0 var(--space-4);
+  color: var(--color-future-text-primary);
+  font-size: var(--text-xl);
+}
+
+.case-study__intro p {
+  margin: 0 0 var(--space-6);
+  color: var(--color-future-text-muted);
+}
+
+.feature-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.feature-column {
+  padding: var(--space-6);
+  border: 1px solid var(--color-future-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-future-bg-elevated);
+}
+
+.feature-column h3 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-md);
+  color: var(--color-future-text-primary);
+}
+
+.feature-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-column li {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-future-text-muted);
+}
+
+.feature-column li i {
+  color: var(--color-accent);
+  margin-right: var(--space-2);
+}
+
+.case-study__cta {
+  text-align: center;
+  padding: var(--space-10);
+  border: 1px solid var(--color-future-border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-future-bg-elevated);
+}
+
+.case-study__cta p {
+  margin: 0 0 var(--space-6);
+  color: var(--color-future-text-muted);
+}
+
+/* Careers */
+.roles-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-future-border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.role-item {
+  border-bottom: 1px solid var(--color-future-border-subtle);
+}
+
+.role-item:last-child {
+  border-bottom: none;
+}
+
+.role-item__toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border: none;
+  background: var(--color-future-bg-elevated);
+  color: var(--color-future-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.role-item__toggle:hover,
+.role-item__toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.role-item__toggle[aria-expanded="true"] {
+  background: rgba(0, 116, 217, 0.12);
+}
+
+.role-item__icon {
+  flex-shrink: 0;
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+}
+
+.role-item__panel {
+  padding: 0 var(--space-6) var(--space-6);
+  background: var(--color-future-bg-primary);
+}
+
+.role-item__panel[hidden] {
+  display: none;
+}
+
+.role-item__panel p {
+  margin: 0 0 var(--space-4);
+  color: var(--color-future-text-muted);
+  font-size: var(--text-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.role-item__panel a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.benefits-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefits-list li {
+  margin-bottom: var(--space-2);
+  color: var(--color-future-text-muted);
+}
+
+/* Contact page */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.contact-form label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-future-text-primary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-future-border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--color-future-bg-elevated);
+  color: var(--color-future-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.contact-form__submit {
+  align-self: flex-start;
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form__submit:hover {
+  background: var(--color-accent-hover);
+}
+
+.form-error {
+  margin: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  font-size: var(--text-sm);
+}
+
+.form-error[hidden] {
+  display: none;
+}
+
+.contact-info {
+  padding: var(--space-8);
+  border: 1px solid var(--color-future-border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-future-bg-elevated);
+}
+
+.contact-info h2 {
+  margin: 0 0 var(--space-4);
+  color: var(--color-future-text-primary);
+}
+
+.contact-info p {
+  margin: 0 0 var(--space-4);
+  color: var(--color-future-text-muted);
+}
+
+.contact-info a {
+  color: var(--color-accent);
+}
+
+@media (max-width: 900px) {
+  .case-study__hero,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .page-main {
+    padding: var(--space-8) var(--space-5);
+  }
+}

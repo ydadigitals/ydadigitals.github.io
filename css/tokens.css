@@ -1,0 +1,86 @@
+/**
+ * Design tokens — ydadigitals
+ * Phase 1: current palette preserved; dark-theme tokens reserved for later.
+ */
+:root {
+  /* Typography */
+  --font-display: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2.5rem;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* Spacing (8px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.625rem;
+  --space-4: 0.75rem;
+  --space-5: 1rem;
+  --space-6: 1.25rem;
+  --space-8: 1.5rem;
+  --space-10: 2rem;
+  --space-12: 2.5rem;
+  --space-16: 3.75rem;
+
+  /* Current palette (same visual intent as pre–Phase 1) */
+  --color-text-primary: #333333;
+  --color-text-nav: #222222;
+  --color-link: #0000ee;
+  --color-heading-2: #a52a2a;
+  --color-heading-3: #4169e1;
+  --color-heading-4: #8b008b;
+  --color-heading-5: #d2691e;
+  --color-accent: #0074d9;
+  --color-accent-hover: #005fa3;
+  --color-accent-text: #ffffff;
+  --color-header-bg: #f2f2f2;
+  --color-footer-bg: rgb(131, 155, 131);
+  --color-nav-bg: rgba(255, 255, 255, 0.98);
+  --color-nav-hover-bg: #f0f4f8;
+  --color-nav-shadow: rgba(0, 0, 0, 0.04);
+  --color-hero-text: #ffffff;
+  --color-hero-overlay: rgba(0, 0, 0, 0.5);
+  --color-cta-shadow: rgba(0, 0, 0, 0.15);
+  --color-table-bg: #f2f2f2;
+  --color-table-border: #000000;
+  --color-code-bg: #f1f1f1;
+  --color-search-bg: #f1f1f1;
+  --color-search-border: #cccccc;
+  --color-muted: #555555;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Site chrome (Phase 2 footer) */
+  --color-site-footer-bg: #0f172a;
+  --color-site-footer-text: #94a3b8;
+  --color-site-footer-link: #94a3b8;
+  --color-site-footer-link-hover: #f5f5f5;
+
+  /* Future Metalab-inspired dark tokens (inactive until theme switch) */
+  --color-future-bg-primary: #0a0a0a;
+  --color-future-bg-elevated: #1a1a1a;
+  --color-future-text-primary: #f5f5f5;
+  --color-future-text-muted: #888888;
+  --color-future-border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 30px;
+
+  /* Focus */
+  --focus-ring-color: var(--color-accent);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+}

@@ -1,0 +1,63 @@
+/* Layout, typography helpers, legacy footer, media */
+
+/* Legacy pages only — modern chrome uses .site-header / .page-portal */
+header:not(.site-header):not(.page-portal) {
+  background-color: var(--color-header-bg);
+  padding: 20px;
+}
+
+.site-header,
+.page-portal {
+  background-color: transparent;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+footer:not(.site-footer) {
+  background-color: var(--color-footer-bg);
+  padding: 20px;
+  text-align: center;
+  font-size: var(--text-base);
+}
+
+img,
+.page-header,
+main,
+article {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 48px;
+  margin-right: 24px;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    height: 36px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 12px;
+  }
+
+  .navbar ul,
+  .navbar__links {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+}

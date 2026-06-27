@@ -1,0 +1,169 @@
+/**
+ * Shared chrome — navigation overlay + site footer (Phase 2).
+ * Loaded after base.css; overrides legacy footer via .site-footer.
+ */
+
+/* —— Wordmark & navbar layout —— */
+.site-wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-text-nav);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.site-wordmark:hover {
+  color: var(--color-accent);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-left: auto;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 1px solid var(--color-nav-hover-bg);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-nav);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar__menu-toggle:hover {
+  background: var(--color-nav-hover-bg);
+}
+
+/* Mobile: overlay menu when JS is active; fallback keeps inline links */
+@media (max-width: 768px) {
+  html.js-nav .navbar__links {
+    display: none;
+  }
+
+  html.js-nav .navbar__menu-toggle {
+    display: inline-flex;
+  }
+}
+
+/* —— Overlay nav —— */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.97);
+}
+
+.nav-overlay[hidden] {
+  display: none !important;
+}
+
+.nav-overlay__panel {
+  width: 100%;
+  max-width: 32rem;
+  padding: var(--space-10);
+}
+
+.nav-overlay__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-overlay__links li {
+  margin: 0;
+}
+
+.nav-overlay__links a {
+  display: block;
+  padding: var(--space-4) 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 600;
+  color: var(--color-future-text-primary);
+  text-decoration: none;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.nav-overlay__links a:hover,
+.nav-overlay__links a:focus-visible {
+  color: var(--color-accent);
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+/* —— Site footer (dark minimal; overrides legacy green footer) —— */
+.site-footer {
+  background-color: var(--color-site-footer-bg);
+  color: var(--color-site-footer-text);
+  padding: var(--space-10) var(--space-8);
+  text-align: center;
+  font-size: var(--text-sm);
+}
+
+.site-footer__copy {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-site-footer-text);
+}
+
+.site-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+.site-footer__legal a {
+  color: var(--color-site-footer-link);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.site-footer__legal a:hover,
+.site-footer__legal a:focus-visible {
+  color: var(--color-site-footer-link-hover);
+}
+
+.site-footer__sep {
+  color: var(--color-site-footer-text);
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .site-footer__sep {
+    display: none;
+  }
+
+  .site-footer__legal {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}

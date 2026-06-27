@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Domain to github pages</title>
+    <meta
+      name="description"
+      content="Internal guide for configuring ydadigitals.com custom domain on GitHub Pages and Hostinger DNS."
+    />
+    <link rel="canonical" href="https://ydadigitals.com/configure.html" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/chrome.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/yda-logo-removebg-small.jpg"
+    />
+  </head>
+
+  <body>
+    <header class="hero">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="/" class="site-wordmark">ydadigitals</a>
+        <div class="navbar__inner">
+          <ul class="navbar__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/crm.html">CRM Solution</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <button
+            type="button"
+            class="navbar__menu-toggle"
+            aria-expanded="false"
+            aria-controls="nav-overlay"
+            aria-label="Open menu"
+          >
+            Menu
+          </button>
+        </div>
+        <div id="searchResults" aria-live="polite"></div>
+      </nav>
+      <div id="nav-overlay" class="nav-overlay" aria-hidden="true" hidden>
+        <nav class="nav-overlay__panel" aria-label="Mobile menu">
+          <ul class="nav-overlay__links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/crm.html">CRM Solution</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <h2>Purchase Domain, Free Hosting on github Pages</h2>
+        <h4>Purchase a domain</h4>
+        <dl>Suppose you have purchased ydadigitals.com</dl>
+
+        <h4>Create a website using github pages</h4>
+        <dl>ydadigitals.github.io</dl>
+
+        <h4>GitHub Settings</h4>
+        <dl>
+          Go to repository of create website(ydadigitals.github.io) > Settings >
+          Pages. Under Custom domain, enter Purchased domain on
+          hostinger(ydadigitals.com) and save.
+        </dl>
+
+        <h4>Update Hostinger DNS Records</h4>
+        <dl>
+          <a
+            href="https://github.com/code-with-amitk/Code-examples/blob/master/Networking/OSI-Layers/Layer-7/Protocols/DNS/README.adoc#alias-record"
+            >ALIAS record</a
+          ><br />
+          &ensp; Hostinger DNS nameservers > Manage DNS Records > Type=CNAME,
+          Name=@, Point to=ydadigitals.github.io, TTL=14400
+          <br /><br />
+          <a
+            href="https://github.com/code-with-amitk/Code-examples/blob/master/Networking/OSI-Layers/Layer-7/Protocols/DNS/README.adoc#cname-record"
+            >CNAME record</a
+          ><br />
+          &ensp; Type=CNAME,name=www, point to=ydadigitals.com TTL=300
+          <br /><br />
+
+          <b
+            ><a
+              href="https://github.com/code-with-amitk/Code-examples/blob/master/Networking/OSI-Layers/Layer-7/Protocols/DNS/README.adoc#mx-record-value-15"
+              >MX records</a
+            ></b
+          ><br />
+          &ensp; All MX records (for email delivery). Since using zoho mail for
+          mail delivery
+          <br /><br />
+
+          <b
+            ><a
+              href="https://github.com/code-with-amitk/Code-examples/blob/master/Networking/OSI-Layers/Layer-7/Protocols/DNS/README.adoc#txt-record-value-13"
+              >TXT Records</a
+            ></b
+          ><br />
+          &ensp; TXT @ "v=spf1 include:zohomail.com ~all" (SPF for email
+          authentication)<br />
+          &ensp; TXT @ "zoho-verification=..." (Zoho verification)<br />
+          &ensp; TXT zmail._domainkey (DKIM for email)
+          <br /><br />
+
+          <b>CAA Records</b><br />
+          &ensp; All CAA records (certificate authorities, safe to keep)
+          <br /><br />
+
+          And also donot delete any record related to github or zoho
+        </dl>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p class="site-footer__copy">&copy; 2026 ydadigitals. All rights reserved.</p>
+      <nav class="site-footer__legal" aria-label="Legal">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
+        <a href="/data-deletion.html">User Data Deletion</a>
+      </nav>
+    </footer>
+    <script src="js/motion.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
+</html>
